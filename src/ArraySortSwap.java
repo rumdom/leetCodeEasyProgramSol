@@ -25,9 +25,6 @@ public class ArraySortSwap {
                 index++;
             }
         }
-
-
-
         return index+1;
     }
 }
