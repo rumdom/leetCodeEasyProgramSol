@@ -8,22 +8,22 @@ public class tomtom2 {
 
     }
 
-    private static int maxConsecutiveSum(int[] array, int k, int l) {
-        if (array == null) {
+   private static int maxConsecutiveSum(int[] trees, int bobTrees, int aliceTrees) {
+        if (trees == null) {
             return -1;
         }
-        int maxLength = k + l;
-        int arrayLength = array.length;
+        int maxLength = bobTrees + aliceTrees;
+        int arrayLength = trees.length;
         int sum = 0;
         if (maxLength > arrayLength) {
             return -1;
         } else if (maxLength == arrayLength) {
             for (int i = 0; i < arrayLength; i++) {
-                sum = sum + array[i];
+                sum = sum + trees[i];
             }
         } else {
             HashSet<Integer> possibleIndices = new HashSet<> ( );
-            sum = possibleCombinations ( array, k, l, possibleIndices );
+            sum = possibleCombinations ( trees, bobTrees, aliceTrees, possibleIndices );
 
         }
         return sum;
