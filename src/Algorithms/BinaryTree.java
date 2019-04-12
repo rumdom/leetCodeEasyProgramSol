@@ -1,6 +1,6 @@
 package Algorithms;
 
-public class BinarySearchTree {
+public class BinaryTree {
 
     public static void main(String[] args) {
 

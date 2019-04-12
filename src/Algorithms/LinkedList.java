@@ -1,5 +1,9 @@
 package Algorithms;
 
+/**
+ * 1.weather a cycle exists in a linked list and
+ * 2.linked list implementatoion
+ */
 public class LinkedList {
     Node head;
 
@@ -41,6 +45,25 @@ public class LinkedList {
         }
         System.out.println ( "middle" + middle.data );
     }
+
+    //To check weather a linked list is cyclic or not
+    private boolean isCyclic() {
+        if (head == null) {
+            return false;
+        }
+        Node slow = head;
+        Node fast = head.next;
+        while (slow != null && fast != null && fast.next != null) {
+            if (slow == fast) {
+                return true;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return false;
+    }
+
+
 }
 
 class Node {
@@ -51,4 +74,6 @@ class Node {
         this.data = data;
         next = null;
     }
+
+
 }
