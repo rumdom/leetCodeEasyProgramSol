@@ -8,14 +8,14 @@ import java.util.List;
 public class SeatsOccupency {
 
     public static void main(String[] args) {
-        //System.out.println ( getAvailableSeats ( 2, "1A 2D 1C" ) );
-        System.out.println ( solution ( 2, "1A 2D 1C" ) );
+        System.out.println ( getAvailableSeats ( 2, "1A 2D 1C" ) );
+        // System.out.println ( solution ( 2, "1A 2D 1C" ) );
 
     }
 
     public static int getAvailableSeats(int n, String s) {
         String str[] = s.split ( " " );
-        List<String> occupied = new ArrayList<> ( );
+        List<String> occupied =null;
         int available = 0;
 
         occupied = Arrays.asList ( str );
@@ -77,8 +77,7 @@ public class SeatsOccupency {
 
     private static String combine(HashSet<String> a) {
         StringBuilder stringBuilder = new StringBuilder ( );
-        for (String x :
-                a) {
+        for (String x : a) {
             stringBuilder.append ( x );
 
         }
@@ -89,7 +88,7 @@ public class SeatsOccupency {
         List<String> output = new ArrayList<> ( );
         for (String seat : s) {
             String x = seat.substring ( seat.length ( ) - 1, seat.length ( ) );
-           // System.out.println ( x );
+            // System.out.println ( x );
             output.add ( x );
         }
         return ((output.contains ( "D" ) && output.contains ( "E" ) && output.contains ( "F" )) || (output.contains ( "G" ) && output.contains ( "E" ) && output.contains ( "F" )));
