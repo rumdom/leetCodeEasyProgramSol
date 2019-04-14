@@ -8,7 +8,8 @@ public class tomtom2 {
 
     }
 
-    private static int maxConsecutiveSum(int[] trees, int bobTrees, int aliceTrees) {
+   private static int maxConsecutiveSum(int[] trees, int bobTrees, int aliceTrees) {
+     
         if (trees == null) {
             return -1;
         }
